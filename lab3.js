@@ -37,7 +37,7 @@ var shininess = 50;
 var light_pos = vec3(0.0, 0.0, 0.0);
 var shade = false;
 var index = 0;
-var eye = vec3(0, 0, 0);
+var eye = vec3(0, 0.5, 1.8);
 var at = vec3(0, 0, 0);
 var up = vec3(0, 1, 0);
 

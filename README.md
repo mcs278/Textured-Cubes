@@ -1,7 +1,7 @@
 ﻿Mai Saleh
 UID: 904-863-797
 
-grade version v2.0
+grade version v3.0
 ----->browser used: Edge
 -----> please click once on the canvas to enable the keyboard keys to work
 
@@ -20,12 +20,12 @@ controls:
 >>>EXTRA>>> "esc" resets the camera. This is extra for easiness of the view
 >>>EXTRA>>>"y" to enable light and shade. this is extra just playing around with the code
 
-what i have done:
+what i have done: EVERYTHIN and all EXTRA CREDIT
 ((1)) used a 1000 x 1000 for canvas size and made extensive comments and a readme file. Enabled the depth buffer and had a black background.
 ((2)) loaded 2 images for 2 cubes and they are size 512x512
 ((3)) first cube 2x2x2 and filtering is set to nearest neighbor
 ((4)) second cube 2x2x2 and image is zoomed out by 50% and Enabled Mip Mapping for the zoomed texture using tri-linear filtering.
-((5)) one cube at -4,0,0 and other at 4,0,0 with horizontal fov to 50 and had i and o keys to make camera go inward and outward by 1 unit per press
+((5)) one cube at -4,0,0 and other at 4,0,0 with prespective projection and horizontal fov to 50 and had i and o keys to make camera go inward and outward by 1 unit per press
 ((6)) r is used to enable and disable the rotation, m cube about y axis with 20
 RPM and flower cube about x axis with 30RPM
 EXTRA CREDIT: 
