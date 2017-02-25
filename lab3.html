@@ -1,0 +1,69 @@
+<html>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/math.js"></script>
+<script type="text/javascript" src="lab3.js"></script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute vec2 TextureCoord;
+attribute vec3 pos_shader;
+attribute vec3 norm_shader;
+varying vec3 N, L, E, H;
+varying vec4 fColor;
+varying vec2 tex_coord;
+uniform mat4 light_mat;
+uniform vec3 light_pos;
+uniform mat4 mov_mat;
+uniform mat4 proj_mat;
+
+void main() {
+    vec3 pos = (mov_mat * vec4(pos_shader, 1.0)).xyz;
+	vec3 light = light_pos;
+    L = normalize(light - pos); 
+    E = normalize(-pos);	
+	H = normalize(L + E);
+    N = normalize(mov_mat * vec4(norm_shader, 0.0)).xyz;
+	tex_coord = TextureCoord; // texture coordinate
+	gl_Position = proj_mat * vec4(pos, 1.0);
+
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+uniform float shininess;
+uniform bool shade; 
+uniform sampler2D uSampler; 
+varying vec3 N, L, E, H;
+varying vec2 tex_coord;
+
+void main() {
+	vec4 texture_col = texture2D(uSampler, tex_coord);
+	vec4 amb = 0.4 * texture_col; 
+	float kd = max(dot(L, N), 0.0);
+	vec4 dif = kd * 0.7 * texture_col; 
+	float ks = pow(max(dot(N, H), 0.0), shininess);
+	vec4 spec = 0.3 * ks * vec4(1.0, 1.0, 1.0, 1.0); 
+	vec4 fColor = amb + dif + spec;
+	fColor.a  = 1.0;
+	
+	if(shade) //if space key pressed
+		gl_FragColor = fColor; // shade/light
+	else
+		gl_FragColor = texture_col; // only texture mapping
+
+}
+</script>
+
+<body>
+<canvas id="gl-canvas" width="1000" height="1000">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+   
+
+
+</body>
+</html>
