@@ -1,16 +1,22 @@
 ﻿Mai Saleh
 UID: 904-863-797
 
-grade version v1.0
+grade version v2.0
 ----->browser used: Edge
 -----> please click once on the canvas to enable the keyboard keys to work
 
-controls::
+controls:
+
 >>> "i" move camera closer/inward by 1 unit per press
->>> "o" move camera further/outward"r" start/stop rotation by 1 unit per press
+
+>>> "o" move camera further/outward by 1 unit per press
+
 >>> "r" start/stop rotation (m cube rotates about y axis by 20RPM & Flower cube around the x axis by 30RPM)
+
 >>> "s" image scrolling by one unit per time on x axis
+
 >>> "t" image rotation by 15RPM
+
 >>>EXTRA>>> "esc" resets the camera. This is extra for easiness of the view
 >>>EXTRA>>>"y" to enable light and shade. this is extra just playing around with the code
 
