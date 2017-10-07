@@ -1,7 +1,4 @@
-﻿Mai Saleh
-UID: 904-863-797
 
-grade version v4.0
 ----->browser used: Edge
 -----> please click once on the canvas to enable the keyboard keys to work
 
@@ -20,7 +17,7 @@ controls:
 >>>EXTRA>>> "esc" resets the camera. This is extra for easiness of the view
 >>>EXTRA>>>"y" to enable light and shade. this is extra just playing around with the code
 
-what i have done: EVERYTHIN and all EXTRA CREDIT
+what i have done:
 ((1)) used a 1000 x 1000 for canvas size and made extensive comments and a readme file. Enabled the depth buffer and had a black background.
 ((2)) loaded 2 images for 2 cubes and they are size 512x512
 ((3)) first cube 2x2x2 and filtering is set to nearest neighbor
